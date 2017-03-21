@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "inlineSourceMap": true,
+		"inlineSources": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "removeComments": true,
+    "noImplicitAny": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "allowSyntheticDefaultImports": true,
+    "pretty": true,
+    "lib": ["es2015", "dom", "es2015.promise"],
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "types": ["node","vue-typescript-import-dts"]
+  },
+  "exclude": [
+    "typings","node_modules"
+  ]
+}
