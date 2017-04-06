@@ -1,5 +1,7 @@
 this project is all in one front end developer package
 
+language is TypeScript
+
 can use angular1/2 vue2 react.
 
 1. npm install
