@@ -1,1 +1,8 @@
-this project is front end start up package. can write angular 1/2 react vue2 in typescript. and combine all these in one page.
+this project is all in one front end developer package
+
+can use angular1/2 vue2 react.
+
+1. npm install
+2. npm install -g http-server
+3. webpack -w
+4. http-server
