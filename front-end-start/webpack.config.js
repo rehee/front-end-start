@@ -6,8 +6,8 @@ module.exports = {
     new webpack.optimize.CommonsChunkPlugin('shared')
   ],
   entry: {
-    "vue": "./vue/index.ts",
-    "ng-test":"./ng/ng-app.ts"
+    "vue": "./ScriptCode/vue/index.ts",
+    "ng-test":"./ScriptCode/ng/ng-app.ts"
   },
   output: {
     path: path.resolve(__dirname, './dist'),
