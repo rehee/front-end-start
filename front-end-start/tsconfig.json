@@ -1,10 +1,10 @@
 {
   "compilerOptions": {
     "target": "es5",
+    "outDir": "./dist/",
     "module": "commonjs",
     "moduleResolution": "node",
-    "inlineSourceMap": true,
-		"inlineSources": true,
+    "sourceMap": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "removeComments": true,
@@ -12,6 +12,7 @@
     "suppressImplicitAnyIndexErrors": true,
     "allowSyntheticDefaultImports": true,
     "pretty": true,
+    "jsx": "react",
     "lib": ["es2015", "dom", "es2015.promise"],
     "typeRoots": [
       "node_modules/@types"

@@ -2,12 +2,13 @@ var path = require('path')
 var webpack = require('webpack')
 
 module.exports = {
-  plugins:[
+  plugins: [
     new webpack.optimize.CommonsChunkPlugin('shared')
   ],
   entry: {
-    "vue": "./ScriptCode/vue/index.ts",
-    "ng-test":"./ScriptCode/ng/ng-app.ts"
+    "ng-test": "./script-code/ng/ng-app.ts",
+    "react":'./script-code/react/index.tsx',
+     "vue": "./script-code/vue/index.ts",
   },
   output: {
     path: path.resolve(__dirname, './dist'),
@@ -15,13 +16,13 @@ module.exports = {
     filename: '[name].js'
   },
   resolve: {
-    extensions: ['.js', '.ts', '.vue'],
+    extensions: ['.js', '.ts', '.vue', '.tsx', '.json'],
     alias: {
       'vue$': 'vue/dist/vue.common.js'
     }
   },
   module: {
-    loaders: [
+   loaders: [
       {
         test: /\.vue$/,
         loader: 'vue-loader'
@@ -30,6 +31,9 @@ module.exports = {
         test: /\.ts$/,
         loader: 'ts-loader'
       },
+       { test: /\.tsx$/, loader: "awesome-typescript-loader" },
+
+      { enforce: "pre", test: /\.js$/, loader: "source-map-loader" },
       {
         test: /\.less$/,
         loader: 'less-loader'
@@ -62,7 +66,12 @@ module.exports = {
     historyApiFallback: true,
     noInfo: true
   },
-  devtool: '#eval-source-map'
+  // devtool: '#eval-source-map',
+  devtool: "source-map",
+  externals: {
+    "react": "React",
+    "react-dom": "ReactDOM"
+  }
 }
 
 if (process.env.NODE_ENV === 'production') {
