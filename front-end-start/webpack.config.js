@@ -13,7 +13,8 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
-    filename: '[name].js'
+    filename: '[name].js',
+    jsonpFunction:'generalapp'
   },
   resolve: {
     extensions: ['.js', '.ts', '.vue', '.tsx', '.json'],
