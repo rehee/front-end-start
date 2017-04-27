@@ -3,14 +3,18 @@ import { AppKeys, AppConfig } from '../config/index';
 (function () {
     angular.module(AppConfig.Keys[AppKeys.AppName]).config(function($stateProvider:any, $urlRouterProvider:any){
         $stateProvider
-        .state('home',{
-			url: '/',
-			template: require('../controllers/home/home.html')
+        .state('layout',{
+			url: '/app',
+			template: require('../controllers/root/root.html')
 		})
-        .state('home2',{
+        .state('layout.home',{
 			url: '/home',
 			template: require('../controllers/home/home.html')
 		})
-        $urlRouterProvider.otherwise('/');
+        .state('layout.home2',{
+			url: '/home2',
+			template: require('../controllers/home2/home.html')
+		})
+        $urlRouterProvider.otherwise('/app/home');
     });
 })();

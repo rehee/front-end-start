@@ -5,7 +5,9 @@ angular.module(AppConfig.Keys[AppKeys.AppName], ['ui.router']);
 
 import  './services/api';
 
+import './controllers/root/root';
 import './controllers/home/home';
+import './controllers/home2/home';
 
 import './filters/my-upper-case'
 import './routers/ui-router';

@@ -3,16 +3,16 @@ import { AppKeys, AppConfig } from '../../config/index';
 import { ApiServiceClass } from '../../services/api';
 import { Core } from '../../services/core';
 (function () {
-    angular.module(AppConfig.Keys[AppKeys.AppName]).controller('homeCtl', ['ApiService', '$scope', homeCtl]);
+    angular.module(AppConfig.Keys[AppKeys.AppName]).controller('homeCtl2', ['ApiService', '$scope', homeCtl2]);
 })();
 
-export function homeCtl(api: ApiServiceClass, $scope: ng.IScope) {
+export function homeCtl2(api: ApiServiceClass, $scope: ng.IScope) {
     let scopeApply = Core.ScopeApplyFunction($scope);
     let parentFunction = Core.ParentScopeFunction($scope);
     let parentObject = Core.ParentScopeObject($scope);
     let vm = this;
-    document.title = 'home1'
-    $scope.layout.title=123;
+    document.title = 'home'
+    $scope.layout.title=333;
     vm.name = api.Test("this is app 2 3 4");
     vm.customer = {
         name: '123',
@@ -33,7 +33,7 @@ export function homeCtl(api: ApiServiceClass, $scope: ng.IScope) {
     }
 
     vm.parentAlert = function () {
-        
+        $scope.alert();
     }
 
     vm.parentLayout = function () {
