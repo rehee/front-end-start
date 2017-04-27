@@ -1,23 +1,13 @@
-import ng from 'angular';
-let angular = require('angular');
-(function () {
-    angular.module('ng-app', []);
-})();
-(function () {
-    angular.module('ng-app').controller('testCtl', ['$q', testCtl]);
-    function testCtl($q: ng.IQService) {
-        let vm = this;
-        vm.Alert= function(){
-            alert();
-        }
-    }
-})();
+import * as angular from 'angular';
+import 'angular-ui-router';
+import { AppKeys, AppConfig } from './config/index';
+angular.module(AppConfig.Keys[AppKeys.AppName], ['ui.router']);
 
-export class TestCtlClass {
-    constructor(private $q: ng.IQService) {
-    }
-    
-    Alert(): void {
-        console.log(1);
-    }
-}
+import  './services/api';
+
+import './controllers/home/home';
+
+import './filters/my-upper-case'
+import './routers/ui-router';
+
+import './directives/c-text/c-text';

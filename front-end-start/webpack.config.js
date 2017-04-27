@@ -6,13 +6,11 @@ module.exports = {
     new webpack.optimize.CommonsChunkPlugin('shared')
   ],
   entry: {
-    "ng-test": "./script-code/ng/ng-app.ts",
-    "react":'./script-code/react/index.tsx',
-     "vue": "./script-code/vue/index.ts",
+    "ng-test": "./script-code/ng/ng-app.ts"
   },
   output: {
-    path: path.resolve(__dirname, './dist'),
-    publicPath: '/dist/',
+    path: path.resolve(__dirname, './dist/package'),
+    publicPath: '/dist/package',
     filename: '[name].js',
     jsonpFunction:'generalapp'
   },
@@ -45,6 +43,10 @@ module.exports = {
         query: {
           name: '[name].[ext]?[hash]'
         }
+      },
+      {
+        test: /\.html$/,
+        loader: 'html-loader'
       },
       {
         test: /\.js$/,

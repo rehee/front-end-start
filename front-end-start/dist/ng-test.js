@@ -1,4 +1,4 @@
-webpackJsonp([2],{
+generalapp([2],{
 
 /***/ 10:
 /***/ (function(module, exports) {
