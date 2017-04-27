@@ -22,7 +22,6 @@ export function homeCtl(api:ApiServiceClass,$scope:ng.IScope) {
         vm.name = 'start';
         count++;
         let list:string[]= ['a','b','c','a','b','c','a','b','c','a','b','c','a','b','c','a','b','c','a','b','c','a','b','c','a','b','c','a','b','c','a','b','c'];
-        
         let name = await api.P(time*1000);
         scopeApply(()=>vm.name=name);
         scopeApply(()=>{vm.list=[];});
