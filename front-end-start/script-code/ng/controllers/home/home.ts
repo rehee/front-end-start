@@ -16,7 +16,7 @@ export function homeCtl(api: ApiServiceClass, $scope: ng.IScope) {
     vm.name = api.Test("this is app 2 3 4");
     vm.customer = {
         name: '123',
-        address: '456'
+        address: '456123'
     };
     vm.list = [];
     console.log($scope);
@@ -33,7 +33,7 @@ export function homeCtl(api: ApiServiceClass, $scope: ng.IScope) {
     }
 
     vm.parentAlert = function () {
-        
+       alert();
     }
 
     vm.parentLayout = function () {

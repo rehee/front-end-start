@@ -10,7 +10,16 @@ export function cText():ng.IDirective {
     return {
         restrict: 'E',
         scope:{
-            info:'=info'
+            info:'='
+            
+        },
+        controller:($scope:ng.IScope)=>{
+           $scope.count=0;
+           $scope.clickMe=()=>{
+               $scope.count++;
+
+                console.log($scope.count);
+            }
         },
         template: require('./c-text.html'),
         link:(scope:ng.IScope,element:ng.IAugmentedJQuery,attr:ng.IAttributes,controller:any,transclude:ng.ITranscludeFunction)=>{

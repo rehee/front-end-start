@@ -15,6 +15,6 @@ import { AppKeys, AppConfig } from '../config/index';
 			url: '/home2',
 			template: require('../controllers/home2/home.html')
 		})
-        $urlRouterProvider.otherwise('/app/home');
+        $urlRouterProvider.otherwise('/app');
     });
 })();
