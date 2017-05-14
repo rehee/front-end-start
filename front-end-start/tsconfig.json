@@ -14,8 +14,9 @@
     "pretty": true,
     "jsx": "react",
     "lib": ["es2015", "dom", "es2015.promise"],
+    "baseUrl": "types",
     "typeRoots": [
-      "node_modules/@types"
+      "node_modules/@types","types"
     ],
     "types": ["node","vue-typescript-import-dts"]
   },

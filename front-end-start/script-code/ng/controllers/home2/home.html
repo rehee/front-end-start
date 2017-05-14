@@ -1,11 +1,9 @@
 <div ng-controller="homeCtl2 as vm">
-    <input type="button" ng-click="vm.parentAlert()" value="alert"/>
-    <input type="button" ng-click="vm.parentLayout()" value="layout"/>
-    <input type="button" ng-click="vm.p(0.5)" value="1"/>
-    <br>
-    <c-text info='vm.customer'></c-text>
+    <input type="button" value="click" my-click="ttt('123','123e')">
+    <input type="button" ng-click="vm.add(1)">
+    <my-repeat my-repeat="item in vm.lists" >
+        <p>repeat:{{item}}</p>
+    </my-repeat>
+   
     
-    <ul>
-        <li ng-repeat="string in vm.list|myUpperCase track by $index">{{::string}}</li>
-    </ul>
 </div>

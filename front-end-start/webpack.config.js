@@ -6,7 +6,9 @@ module.exports = {
     new webpack.optimize.CommonsChunkPlugin('shared')
   ],
   entry: {
-    "ng-test": "./script-code/ng/ng-app.ts"
+    "ng-test": "./script-code/ng/ng-app.ts",
+    "jasmine.spec":"./script-code/ng/controllers/home2/home.spec.ts",
+    "jasmine-calcu.spec":"./script-code/ng/controllers/calculator/calculator.spec.ts"
   },
   output: {
     path: path.resolve(__dirname, './dist/package'),
